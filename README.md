@@ -41,13 +41,11 @@
 
 ### 1. 打开工作台
 
-页面入口位于：
+页面入口位于 GitHub 项目主页：
 
-```text
-outputs/miniso-tnt-annual-20260908/index.html
-```
+https://github.com/miaomiaow748-cpu/Marketing-Project-Studiooo
 
-可以直接用浏览器打开。为保持访问地址稳定，也可以在本项目根目录启动本地静态服务：
+打开项目主页即可查看并运行当前交付页面。为保持访问地址稳定，也可以在本项目根目录启动本地静态服务：
 
 ```bash
 python3 -m http.server 8000 --bind 127.0.0.1 --directory outputs/miniso-tnt-annual-20260908
