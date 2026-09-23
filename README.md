@@ -41,11 +41,9 @@
 
 ### 1. 打开工作台
 
-页面入口位于 GitHub 项目主页：
+页面入口位于：https://miaomiaow748-cpu.github.io/Marketing-Project-Studiooo/
 
-https://miaomiaow748-cpu/Marketing-Project-Studiooo
-
-打开项目主页即可查看并运行当前交付页面。前端无需 npm 安装或打包。
+打开网址即可查看并运行当前交付页面。前端无需 npm 安装或打包。
 
 ## 推荐使用流程
 
