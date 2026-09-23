@@ -43,7 +43,7 @@
 
 页面入口位于 GitHub 项目主页：
 
-https://github.com/miaomiaow748-cpu/Marketing-Project-Studiooo
+https://miaomiaow748-cpu/Marketing-Project-Studiooo
 
 打开项目主页即可查看并运行当前交付页面。前端无需 npm 安装或打包。
 
