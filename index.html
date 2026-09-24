@@ -117,7 +117,7 @@
       <div class="top-actions"><button class="btn primary" data-quick="new">新建项目</button><button id="methodBtn" type="button" hidden></button></div>
     </header>
       <div class="statusbar"><span class="pill green" id="heroStatusPill"><span class="dot"></span>项目状态加载中</span><span class="pill" id="liveToday">今天：--</span><span class="pill">合成情报演示</span><span class="pill red" id="heroRiskSummary">风险数据加载中</span></div>
-    <div class="notice">无真实投后数据不报告营销增量；本首版不包含复盘。</div>
+    <div class="notice">本网页数据已进行虚拟处理，非真实数据</div>
     <section class="cockpit section" id="dashboard">
       <div class="cockpit-hero">
         <div><div class="hero-date" id="liveHeroDate">星期X · -- · 营销驾驶舱</div><h2 class="hero-question">今天整个营销团队最值得关注什么？</h2><div class="hero-focus"><strong id="heroFocusText">项目进度与截止时间加载中。</strong><br><span id="heroFocusDetail">项目数据将从项目中心实时同步。</span></div></div>
@@ -174,7 +174,7 @@
         </section>
         <section class="card section" id="infoCenter">
           <div class="card-head"><div><h2>品牌信息中心</h2><div class="muted small">合作双方基础信息、风险禁忌与权益边界；所有创意和活动必须以此为约束</div></div><span class="pill red" id="riskBlockerCount">阻断 0</span></div>
-          <div class="info-summary"><button class="info-metric" data-info-jump="profiles"><span>时代少年团档案</span><b>团体+7人</b><div class="small muted">生日、应援色、粉丝名、动物塑</div></button><button class="info-metric" data-info-jump="brand"><span>MINISO资料库</span><b>4类</b><div class="small muted">品牌、产品、门店渠道、联名案例</div></button><button class="info-metric" data-info-jump="rights"><span>合作权益矩阵</span><b>7项</b><div class="small muted">KV、语录、场景、渠道、素材</div></button><button class="info-metric" data-info-jump="risks"><span>风险禁忌</span><b id="infoRiskCount">14条</b><div class="small muted">发布前阻断与高敏点</div></button></div>
+          <div class="info-summary"><button class="info-metric" data-info-jump="profiles"><span>时代少年团档案</span><b>团体+7人</b><div class="small muted">生日、应援色、粉丝名、动物塑</div></button><button class="info-metric" data-info-jump="brand"><span>MINISO资料库</span><b>4类</b><div class="small muted">品牌、产品、门店渠道、联名案例</div></button><button class="info-metric" data-info-jump="rights"><span>合作权益矩阵</span><b>5项</b><div class="small muted">KV、场景、打卡、渠道与素材权益</div></button><button class="info-metric" data-info-jump="risks"><span>风险禁忌</span><b id="infoRiskCount">12条</b><div class="small muted">发布前阻断与高敏点</div></button></div>
           <div class="info-accordion" id="infoAccordion">
             <section class="info-accordion-item">
               <button class="info-accordion-trigger" type="button" aria-expanded="false" data-info-toggle="profiles"><span>时代少年团档案<small>团体+7人 · 生日、应援色、粉丝名、动物塑、风格与作品</small></span><span class="info-toggle-icon">＋</span></button>
@@ -185,8 +185,8 @@
               <div class="info-panel info-accordion-content" id="infoBrand"><div class="library-grid" id="brandLibraryGrid"></div></div>
             </section>
             <section class="info-accordion-item">
-              <button class="info-accordion-trigger" type="button" aria-expanded="false" data-info-toggle="rights"><span>合作权益矩阵<small>KV、语录、场景、打卡、口播、渠道与素材权益</small></span><span class="info-toggle-icon">＋</span></button>
-              <div class="info-panel info-accordion-content" id="infoRights"><div class="rights-scope-grid" id="rightsScopeGrid"></div><div class="matrix" style="margin-top:12px"><table><thead><tr><th>成员</th><th>主KV海报</th><th>创意语录</th><th>宿舍场景</th><th>门店打卡</th><th>直播口播</th><th>授权状态</th></tr></thead><tbody id="infoRightsBody"></tbody></table></div></div>
+              <button class="info-accordion-trigger" type="button" aria-expanded="false" data-info-toggle="rights"><span>合作权益矩阵<small>KV、场景、打卡、渠道与素材权益</small></span><span class="info-toggle-icon">＋</span></button>
+              <div class="info-panel info-accordion-content" id="infoRights"><div class="rights-scope-grid" id="rightsScopeGrid"></div><div class="matrix" style="margin-top:12px"><table><thead><tr><th>成员</th><th>主KV海报</th><th>宿舍场景</th><th>门店打卡</th><th>渠道权益</th><th>素材授权</th><th>授权状态</th></tr></thead><tbody id="infoRightsBody"></tbody></table></div></div>
             </section>
             <section class="info-accordion-item">
               <button class="info-accordion-trigger" type="button" aria-expanded="false" data-info-toggle="risks"><span>风险禁忌<small>14条 · TNT/IP、粉丝社群、品牌合规</small></span><span class="info-toggle-icon">＋</span></button>
@@ -207,11 +207,11 @@ const tags=["开学/宿舍/追星生活场景","成员个性与陪伴感","同�
 const evidence=[
  {id:"E-S01",platform:"微博",date:"2026-07-20",text:"开学想把宿舍桌面布置得有一点追星氛围，但希望日常也能用。",tags:[tags[0],tags[1]],interactions:null,confirmed:true,source:"demo:miniso-school-01"},
  {id:"E-S02",platform:"抖音",date:"2026-07-23",text:"如果有成员同款，希望标清商品名、价格和附近门店是否能买到。",tags:[tags[2],tags[4]],interactions:null,confirmed:true,source:"demo:miniso-school-02"},
- {id:"E-S03",platform:"微博",date:"2026-07-18",text:"希望每个人都有一句不一样的开学寄语，像是成员陪我一起开启新学期。",tags:[tags[1]],interactions:18,confirmed:true,source:"demo:miniso-school-03"},
+ {id:"E-S03",platform:"微博",date:"2026-07-18",text:"希望“时代少年团陪你开学”像成员陪我一起开启新学期。",tags:[tags[1]],interactions:18,confirmed:true,source:"demo:miniso-school-03"},
  {id:"E-S04",platform:"抖音",date:"2026-07-21",text:"宿舍收纳、挂件和小夜灯如果能在线上看完再去门店买，会方便很多。",tags:[tags[0],tags[2],tags[4]],interactions:21,confirmed:true,source:"demo:miniso-school-04"},
  {id:"E-S05",platform:"微博",date:"2026-07-24",text:"抽奖可以有，但不要连续几天都只推福利，想看成员真实使用场景。",tags:[tags[3],tags[5]],interactions:20,confirmed:true,source:"demo:miniso-school-05"},
  {id:"E-S06",platform:"抖音",date:"2026-07-25",text:"门店打卡最好有清楚的点位和兑换规则，不要到了店里才发现信息不全。",tags:[tags[4],tags[5]],interactions:12,confirmed:false,source:"demo:miniso-school-06"},
- {id:"E-S07",platform:"微博",date:"2026-07-27",text:"喜欢轻松的开学日常，成员语录可以印在可重复使用的收纳袋上。",tags:[tags[0],tags[1],tags[2]],interactions:9,confirmed:true,source:"demo:miniso-school-07"},
+ {id:"E-S07",platform:"微博",date:"2026-07-27",text:"喜欢轻松的开学日常，“时代少年团陪你开学”主题可以印在可重复使用的收纳袋上。",tags:[tags[0],tags[1],tags[2]],interactions:9,confirmed:true,source:"demo:miniso-school-07"},
  {id:"E-S08",platform:"抖音",date:"2026-07-29",text:"想参加互动，但规则要简单，最好能在线下门店直接看到同款。",tags:[tags[3],tags[2],tags[4]],interactions:4,confirmed:false,source:"demo:miniso-school-08"}
 ];
 const events=[
@@ -247,9 +247,7 @@ const risks=[
  {id:"R-IP-01",module:"TNT/IP",severity:"blocker",title:"应援色：黑黄双色",state:"official",stateLabel:"公开资料已确认",why:"官方后援会公开指南与相关应援物料均以黑、黄为核心识别。",guard:"团体主视觉、灯牌/贴纸、门店打卡物料先做黑黄一致性校验；不要擅自替换为其他主色。",source:"https://weibo.com/7324498877/4985287971703145",sourceLabel:"时代少年团后援会公开指南"},
  {id:"R-IP-02",module:"TNT/IP",severity:"blocker",title:"粉丝名：爆米花",state:"official",stateLabel:"公开资料已确认",why:"公开粉丝指南与时间线将粉丝称谓记为“爆米花”。",guard:"文案、话题、福利称呼统一使用已核对口径；不自造或混用相近称谓。",source:"https://weibo.com/7324498877/4985287971703145",sourceLabel:"时代少年团后援会公开指南"},
  {id:"R-IP-03",module:"TNT/IP",severity:"blocker",title:"7人团体完整性与成员身份",state:"rule",stateLabel:"项目发布规则",why:"团体创意容易出现漏人、错名、错图或把单人素材写成团体素材。",guard:"团体素材发布前逐项核对7位成员、姓名、顺序与肖像；单人素材必须明确单人语境并有授权事实。",source:"https://weibo.com/u/6620842908",sourceLabel:"时代少年团官方微博账号"},
- {id:"R-IP-04",module:"TNT/IP",severity:"high",title:"动物塑（动物拟人）不是官方硬事实",state:"community",stateLabel:"社群约定/二手资料",why:"网络内容常把成员对应到不同动物，但来源多为粉丝/二手整理，不能直接当作艺人自我认领。",guard:"未经当前经纪/艺人确认，不在可发布KV、商品命名或官方口吻中使用；需使用时逐成员核对并留存审批。",source:"https://weibo.com/2/detail/5338021012441191",sourceLabel:"公开社群讨论（非官方设定）"},
  {id:"R-IP-05",module:"TNT/IP",severity:"high",title:"纪念日口径：成团日、成团夜、出道日要分开",state:"review",stateLabel:"公开资料待复核",why:"公开时间线对2019-08-25成团、8月30日成团夜、11月23日出道存在不同表述。",guard:"节点标题必须写清口径并链接来源；未获官方确认前不得写成“唯一官方纪念日”。",source:"https://weibo.com/ttarticle/p/show?id=2309405004213242691698",sourceLabel:"公开时间线资料"},
- {id:"R-FAN-01",module:"粉丝社群",severity:"blocker",title:"七人不能缺人",state:"community",stateLabel:"社群高敏约定",why:"团体粉丝对“漏人/错人”高度敏感，尤其在团体海报、福利与成员语录组合中。",guard:"建立7人清单与图文对照表；导出前做漏人、重复、错名、错图四项检查。",source:"https://weibo.com/u/6620842908",sourceLabel:"官方账号成员信息入口"},
  {id:"R-FAN-02",module:"粉丝社群",severity:"high",title:"曝光、资源与福利分配争议",state:"community",stateLabel:"社群高敏约定",why:"“要平均分配”是常见粉丝期待，但不是商务合同或官方硬规；差异化任务仍可能引发争议。",guard:"在brief中写明7人均覆盖、任务可差异化的原则；提前解释成员角色，不用模糊的“平均曝光”承诺。",source:"https://weibo.com/7324498877/4985287971703145",sourceLabel:"后援会公开指南（社群沟通参考）"},
  {id:"R-FAN-03",module:"粉丝社群",severity:"high",title:"过度商业化、福利过密、规则不清",state:"community",stateLabel:"样本/社群反馈",why:"开学季合成样本已出现对连续福利、复杂规则和信息不全的反感信号；不能外推为全体粉丝概率。",guard:"内容节奏以成员陪伴/使用场景为主，福利设置留出间隔；商品、库存、点位、兑换条件一次说明白。",source:"demo:miniso-school-05",sourceLabel:"开学季合成样本 E-S05/E-S06/E-S08"},
  {id:"R-FAN-04",module:"粉丝社群",severity:"medium",title:"粉丝名、应援色、口号不可当作授权",state:"rule",stateLabel:"项目发布规则",why:"公开社群称谓和应援元素可用于风险识别，但不自动授予商业使用权。",guard:"商业化使用仍走品牌/IP/经纪审核；不冒充官方后援会，不伪造抽奖或“官方福利”口吻。",source:"https://weibo.com/7324498877/4985287971703145",sourceLabel:"公开粉丝指南"},
@@ -261,11 +259,11 @@ const risks=[
 ];
 const ideas=[
  {id:"I1",title:"成员陪伴式宿舍焕新 + 同款清单 + 门店打卡",evidence:["E-S01","E-S02","E-S04"],scores:[2,2,2,1,2],reason:"同时回应生活场景、商品信息与门店动作；授权和库存是发布前门槛。"},
- {id:"I2",title:"7人7句开学语录 · 收纳袋团体赠品",evidence:["E-S03","E-S07"],scores:[2,2,1,2,2],reason:"成员差异化强、物料可落地；交易承接需要补商品信息与门店规则。"},
+ {id:"I2",title:"时代少年团陪你开学 · 收纳袋团体赠品",evidence:["E-S03","E-S07"],scores:[2,2,1,2,2],reason:"主题表达清晰、物料可落地；交易承接需要补商品信息与门店规则。"},
  {id:"I3",title:"开学福利打卡挑战 · 到店兑换",evidence:["E-S05","E-S06","E-S08"],scores:[1,1,2,1,1],reason:"互动门槛低但需控制福利密度，并先核验库存、兑换规则与门店覆盖。"}
 ];
 const members=["马嘉祺","丁程鑫","宋亚轩","刘耀文","张真源","严浩翔","贺峻霖"];
-const rights=["主KV海报","创意语录","宿舍场景","门店打卡","直播口播"];
+const rights=["主KV海报","宿舍场景","门店打卡","渠道权益","素材授权"];
 const memberProfiles=[
  {name:"时代少年团（TNT）",birthday:"成团2019.8.25 / 出道2019.11.23",color:"黑黄",fan:"爆米花",animal:"团体向",style:"青春成长/少年感/全能男团",works:"《舞象之年》《朱雀》《哪吒》《乌托邦》"},
  {name:"马嘉祺",birthday:"12.12",color:"月白星紫",fan:"小气球",animal:"猫",style:"温柔治愈/清冷主唱/队长气质",works:"《触摸阳光》《偷》"},
@@ -284,17 +282,15 @@ const brandLibrary=[
 ];
 const rightsScopes=[
  {title:"团体主KV / 7人分海报",scope:"主KV海报",status:"待授权事实",rule:"开学季主项目至少覆盖7位成员各一次；团体款可先模拟，单人肖像必须逐项授权。"},
- {title:"7人创意语录",scope:"创意语录",status:"待授权事实",rule:"可做7人不同语录结构，但署名、语录来源、商业使用范围必须核验。"},
  {title:"开学宿舍场景",scope:"宿舍场景",status:"方案可模拟",rule:"场景可先用商品与情绪方向模拟；涉及成员同款、肖像、昵称时再进入授权核验。"},
  {title:"门店体验与打卡",scope:"门店打卡",status:"门店规则待确认",rule:"点位、兑换条件、库存、门店范围一次说明白，避免到店信息不清。"},
- {title:"直播口播 / 品牌直播日",scope:"直播口播",status:"排期待确认",rule:"11月品牌直播日作为重点节点；达人/冲榜/直播口播需确认报价、商业标识和发布时间，口播脚本、出镜形式、商品清单需品牌与经纪审核。"},
  {title:"渠道权益与发布资产",scope:"渠道权益",status:"分渠道管理",rule:"微博、抖音、小红书、直播间、门店物料分渠道管理，明确渠道权益归属、投放范围、发布时间和商业标识。"},
  {title:"品牌资产与第三方素材",scope:"素材授权",status:"授权留存",rule:"素材来源、音乐、图片、字体、节目截图必须留存授权；logo、联合标识、包装图、门店图、第三方素材只使用品牌方交付或已授权版本。"}
 ];
 const timelineData={
  today:[
   {date:"今天",title:"开学季社媒方案定稿",sub:"负责人：内容组 · 待确认",day:"今日"},
-  {date:"今天",title:"7人创意语录与主KV完整性检查",sub:"负责人：艺人/IP组 · 2项阻断",day:"阻断"},
+  {date:"今天",title:"时代少年团陪你开学主题与主KV完整性检查",sub:"负责人：艺人/IP组 · 2项阻断",day:"阻断"},
   {date:"今天",title:"达人报价与预算口径确认",sub:"负责人：媒介组 · 预算待确认",day:"18:00"}
  ],
  "7":[
@@ -317,7 +313,7 @@ const hotspots=[
 ];
 const briefVariants=[
  {title:"“新学期焦虑”讨论升温，与开学季项目高度相关。",items:["TNT：少年成长与陪伴感可承接情绪","MINISO：宿舍收纳与桌面焕新具备商品接口","粉丝：关注7人完整性与规则透明度","风险：艺人审核未开始，不能先行发布"],direction:"开学不完美也没关系"},
- {title:"收官阶段的核心不是加福利，而是把购买与到店信息讲清楚。",items:["优先补齐SKU、价格、库存和门店点位","以7人不同语录保持陪伴感与成员差异","达人投放先确认报价与商业标识","风险：避免福利过密和模糊兑换规则"],direction:"把新开始，收进日常"}
+ {title:"收官阶段的核心不是加福利，而是把购买与到店信息讲清楚。",items:["优先补齐SKU、价格、库存和门店点位","以“时代少年团陪你开学”保持陪伴感与主题统一","达人投放先确认报价与商业标识","风险：避免福利过密和模糊兑换规则"],direction:"把新开始，收进日常"}
 ];
 const activities=[
  {id:"P1",name:"2026开学季",status:"进行中",progress:74,owner:"林怡",milestone:"09.12 艺人/IP首轮送审",risk:"艺人审核未开始；商品与门店信息待核验"},
@@ -348,7 +344,7 @@ const fanInsight={
 function renderFans(){const root=document.getElementById("fanInsightView");if(!root)return;const badge="<span class='fan-badge'>合成样本·待真实数据替换</span>";root.innerHTML="<div class='fan-grid'><article class='fan-card'><div class='fan-card-head'><h3>粉丝总览</h3>"+badge+"</div><div class='fan-total'>"+fanInsight.total+" <span class='muted small'>TNT粉丝总量（合成数）</span></div><div class='fan-donut-wrap'><div class='fan-donut'><div class='fan-donut-label'>7人粉丝占比</div></div><div class='fan-legend'>"+fanInsight.layers.map((x,i)=>"<span><i style='background:"+(i===0?"var(--red)":i===1?"var(--blue)":"var(--orange)")+"'></i>"+x[0]+" "+x[1]+"</span>").join("")+"</div></div></article><article class='fan-card'><div class='fan-card-head'><h3>基础画像</h3>"+badge+"</div><div class='fan-bars'>"+fanInsight.ages.map(x=>"<div class='fan-bar-row'><span>"+x[0]+"</span><div class='fan-bar'><i style='width:"+x[1]+"'></i></div><b>"+x[1]+"</b></div>").join("")+"</div><p class='small muted' style='margin:9px 0 0'>女性 68% · 学生 61% / 职场 39% · 月均消费力 ¥51-300 为主</p><p class='small muted' style='margin:3px 0 0'>TOP5城市："+fanInsight.cities.map(x=>x[0]+" "+x[1]).join(" · ")+"</p></article><article class='fan-card'><div class='fan-card-head'><h3>平台偏好</h3>"+badge+"</div><div class='fan-platforms'>"+fanInsight.platforms.map(x=>"<div class='fan-platform'><b>"+x[0]+" · "+x[1]+"使用时长</b><small>偏好："+x[2]+"</small></div>").join("")+"</div></article><article class='fan-card'><div class='fan-card-head'><h3>内容偏好 · 高互动TOP5</h3>"+badge+"</div><div class='fan-bars'>"+fanInsight.contents.map(x=>"<div class='fan-bar-row'><span>"+x[0]+"</span><div class='fan-bar'><i style='width:"+x[1]+"'></i></div><b>"+x[1]+"互动率</b></div>").join("")+"</div></article><article class='fan-card wide'><div class='fan-card-head'><h3>成员粉丝差异</h3>"+badge+"</div><div style='overflow:auto'><table class='fan-table'><thead><tr><th>成员</th><th>年龄层</th><th>消费力</th><th>主用平台</th><th>内容偏好差异</th></tr></thead><tbody>"+fanInsight.members.map(x=>"<tr>"+x.map(v=>"<td>"+v+"</td>").join("")+"</tr>").join("")+"</tbody></table></div></article><article class='fan-card wide'><div class='fan-card-head'><h3>粉丝敏感点</h3>"+badge+"</div><div class='fan-risk'>"+fanInsight.sensitive.map(x=>"<div class='fan-risk-item'>⚠ "+x+"</div>").join("")+"</div></article></div><details class='fan-method'><summary>数据口径说明</summary><p>有效样本：正文非空、发布时间不晚于截止日；同一 source_ref 只计一次，缺失互动数不补0。</p><p>议题占比：标签内容数÷有效已采样内容数；多标签可超100%，不代表全体粉丝概率。</p><p>偏好代理：标签占比+平台互动率+人工确认；互动数单独不能证明喜欢。</p></details>"}
 function renderRiskMeta(){const anchor=document.getElementById("riskCheckView");if(!anchor||document.getElementById("riskMeta"))return;anchor.insertAdjacentHTML("beforebegin","<div class='risk-intro' id='riskMeta'><b>风险分级说明：</b>阻断=未核验不得发布；高风险=必须在brief留护栏；社区约定≠官方禁令。<h4 style='margin:10px 0 5px'>待核验清单</h4><ul class='muted' style='margin:0;padding-left:18px;font-size:12px'><li>演唱会/综艺日期与周年口径</li><li>商品价格、库存、门店范围与兑换条件</li><li>7人单人肖像、同款与署名授权</li><li>logo、IP产品及第三方素材审核</li><li>达人投放报价、商业标识与发布时间</li></ul></div>")}
 let budget={offline:100000,online:100000,gift:100000};let budgetCap=300000;let windowStart="2026-08-15";let windowEnd="2026-09-15";
-const departments=[{id:"ambassador",name:"代言人项目组",desc:"艺人/IP沟通、授权与项目统筹"},{id:"operations",name:"运营组",desc:"社群运营、活动机制与用户触达"},{id:"design",name:"设计组",desc:"主视觉、物料与门店陈列设计"},{id:"mcn",name:"MCN组",desc:"达人筛选、报价与内容投放协同"},{id:"channel",name:"渠道发展组",desc:"电商、直播与渠道资源承接"},{id:"retail",name:"营运组",desc:"门店执行、库存与核销管理"}];const departmentAssignments={P1:[]};
+const departments=[{id:"marketing",name:"营销组",desc:"项目统筹、艺人沟通与营销策略"},{id:"design",name:"设计组",desc:"主视觉、物料与门店陈列设计"},{id:"operations",name:"运营组",desc:"社媒运营、活动机制与用户触达"},{id:"retail",name:"门店组",desc:"门店执行、库存与核销管理"},{id:"legal",name:"法务组",desc:"合同、授权与素材合规审核"},{id:"business",name:"业务组",desc:"商品、电商、直播与渠道资源承接"}];const departmentAssignments={P1:[]};
 function renderCrossBrief(){const root=document.getElementById("briefContent");if(!root)return;const p=projects.find(x=>x.status==="进行中")||projects[0],today=new Date(),end=new Date(windowEnd),days=Math.max(0,Math.ceil((end-today)/86400000)),stage=p.progress>=70?"收官冲刺":p.progress>=40?"爆发期":p.progress>0?"预热中":"待启动",short=s=>s.replace(/[（(].*?[）)]/g,"").slice(0,18),rel=o=>Math.min(99,Math.round(marketingValue(o)*.72+(o.category==="社会热点"?9:o.category==="MINISO热点"?6:8))),ranked=opportunities.map(o=>({o,r:rel(o)})).sort((a,b)=>b.r-a.r).slice(0,3),top=ranked[0].o,actions={O1:"借月光团圆情绪做中秋预热问答，内容组",O2:"用敢表达情绪做评论投票，社群组",O3:"提炼夏末光影做情绪贴纸，设计组",O4:"把成长边界转成UGC接龙，内容组",O5:"错峰借快闪动线做门店路线卡，零售组",O6:"用YOYO桌面搭子做商品组合，商品组",O7:"把IP实力转成选品榜单，品牌组",O8:"借高级感做陈列参考，设计组",O9:"发起i人宿舍自救投票，社群组",O10:"借追剧夜场景做零食清单，商品组",O11:"保留AI观察，不进入主传播，策略组"};root.innerHTML="<div class='cross-brief'><div class='cross-project'><b>项目阶段</b><span>"+p.name+"，"+stage+"，进度"+p.progress+"%，距截止"+days+"天</span></div><div class='cross-hotspots'><b>热点TOP3</b>"+ranked.map((x,i)=>"<div class='cross-hotspot'><span>"+(i+1)+".</span><span>"+short(x.o.title)+" · 关联度"+x.r+"% · "+short(x.o.advice)+"</span></div>").join("")+"</div><div class='cross-decision'><b>🔥 今日决策：</b>"+stage+"×"+short(top.title)+"，先做可转化的"+top.discussion[0]+"切口。</div><div class='cross-actions'><b>✅ 热点怎么用</b>"+ranked.map((x,i)=>"<div>"+(x.r>=80?"🔴":x.r>=65?"🟡":"🟢")+" "+short(x.o.title)+"→"+actions[x.o.id]+"</div>").join("")+"</div><div class='cross-timing'><b>⚠️ 时机判断：</b>在"+(top.title.includes("9.12")?"9月12日前":"热点上升24小时内")+"完成素材确认与发布窗口锁定。</div><div class='cross-slogan'><b>💡 内容方向：</b>"+stage+" × "+top.discussion[0]+"：把热度带回日常。</div></div>"}
 let briefIndex=0;let calendarView="year";let calendarFilter="all";let calendarMonth=8;let selectedProjectId="P1";let radarFilter="all";let savedOpportunityIds=[];let usedOpportunityIds=[];
 try{const savedCalendar=JSON.parse(localStorage.getItem("miniso-tnt-calendar-v4")||"null");if(Array.isArray(savedCalendar)&&savedCalendar.length)events.splice(0,events.length,...savedCalendar)}catch(e){}
@@ -396,7 +392,7 @@ function renderCalendar(){if(calendarView==="month")renderMonthView();else if(ca
 function renderWeekCalendar(){const grid=document.getElementById("calendarGrid");grid.className="calendar-view";const now=new Date(),base=new Date(now.getFullYear(),now.getMonth(),now.getDate());base.setDate(base.getDate()-((base.getDay()+6)%7));let html="<div class='week-grid'>";for(let i=0;i<7;i++){const d=new Date(base);d.setDate(base.getDate()+i);const ds=dateKey(d),nodes=calendarRows().filter(e=>e.date===ds);html+="<div class='week-day "+(ds===dateKey(now)?"today":"")+"'><div class='week-date'>"+ds.slice(5)+"<span>周"+["日","一","二","三","四","五","六"][d.getDay()]+"</span></div>"+(nodes.length?nodes.map(e=>"<div class='day-node "+nodeSlug(e)+"' data-node-id='"+e.id+"'><span class='priority-badge "+nodePriority(e)+"'>"+nodePriority(e)+"</span> "+e.name+"</div>").join(""):"<div class='week-empty'>暂无节点</div>")+"</div>"}grid.innerHTML=html+"</div>";attachNodeClicks()}
 function renderWeekView(){const grid=document.getElementById("calendarGrid");grid.className="calendar-view";const base=new Date(2026,calendarMonth,9);base.setDate(base.getDate()-((base.getDay()+6)%7));let html="<div class='week-grid'>";for(let i=0;i<7;i++){const d=new Date(base);d.setDate(base.getDate()+i);const ds=dateKey(d),nodes=calendarRows().filter(e=>e.date===ds);html+="<div class='week-day "+(ds==="2026-09-09"?"today":"")+"><div class='week-date'>"+ds.slice(5)+"<span>周"+["日","一","二","三","四","五","六"][d.getDay()]+"</span></div>"+(nodes.length?nodes.map(e=>"<div class='day-node "+nodeSlug(e)+"' data-node-id='"+e.id+"'><span class='priority-badge "+nodePriority(e)+"'>"+nodePriority(e)+"</span> "+e.name+"</div>").join(""):"<div class='week-empty'>暂无节点</div>")+"</div>"}grid.innerHTML=html+"</div>";attachNodeClicks()}
 function openNodeDetail(id){const e=events.find(x=>x.id===id);if(!e)return;const p=nodePriority(e),cat=nodeCategory(e),status=e.status==="confirmed"?"已确认":e.status==="public-review"?"公开资料待复核":"待核验";openDrawer("<span class='pill "+(p==="S"?"red":p==="A"?"gray":"")+"'>"+p+"级 · "+cat+" · "+status+"</span><h2>"+e.name+"</h2><div class='node-detail-grid'><div class='node-detail-item'><span>节点名称</span><b>"+e.name+"</b></div><div class='node-detail-item'><span>节点类型</span><b>"+cat+"</b></div><div class='node-detail-item'><span>时间</span><b>"+nodeDateRange(e)+"</b></div><div class='node-detail-item'><span>目标人群</span><b>"+nodeAudience(e)+"</b></div><div class='node-detail-item'><span>优先级</span><b>"+p+"级 · "+priorityAdvice[p].resource+"</b></div><div class='node-detail-item'><span>重复规则</span><b>"+(e.repeat||"待设定")+"</b></div></div><p>"+(e.note||"暂无节点备注")+"</p>"+(e.source?"<p class='small'><a href='"+e.source+"' target='_blank' rel='noreferrer'>查看公开来源 ↗</a></p>":"")+"<div class='node-detail-actions'><button class='btn primary' data-node-action='brief' data-node-id='"+e.id+"'>AI生成节点Brief</button><button class='btn ghost' data-node-action='project' data-node-id='"+e.id+"'>一键创建项目</button><button class='btn ghost' data-node-action='edit' data-node-id='"+e.id+"'>编辑节点</button><button class='btn ghost' data-node-action='close'>返回</button></div>");document.querySelectorAll("[data-node-action]").forEach(btn=>btn.onclick=()=>{const a=btn.dataset.nodeAction;if(a==="brief")openNodeBrief(id);else if(a==="project")openProjectTemplate(id);else if(a==="edit")openNodeForm(id);else closeDrawer()})}
-function openNodeBrief(id){const e=events.find(x=>x.id===id);if(!e)return;const cat=nodeCategory(e),brief={"艺人节点":{background:"成员节点与团体内容带来陪伴感和身份认同。",emotion:"粉丝期待7人完整、成员差异化表达和准确口径。",social:"成长、追星生活和年轻人情绪可作为内容语境。",trend:"短视频口播、语录卡、陪伴式日常和演出切片。",brand:"用日常可用产品承接情绪，不把物料变成单纯硬广。",ip:"成员肖像、语录、同款、应援元素需逐项授权。",idea:"7人7句陪伴语录 + 生活场景产品清单。",risk:"漏人、错名、动物塑误用、单人素材未授权。"},"营销项目":{background:"明确周期的品牌战役，需要把节点情绪转为传播与交易动作。",emotion:"新开始、焕新、参与感和可执行的购买路径。",social:"开学/大促等社会节奏与平台内容趋势。",trend:"话题预热、达人种草、到店打卡、直播转化。",brand:"商品、门店、赠品和线上内容形成闭环。",ip:"团体/成员使用范围、logo与联合标识先过审批。",idea:"情绪主张 + 同款清单 + 门店任务卡。",risk:"预算、库存、门店范围、审批准入和福利规则。"}}[cat]||{background:"围绕节点建立品牌与消费者的连接。",emotion:"轻量参与、明确利益和可理解的信息。",social:"结合节日或季节语境，避免生造热点。",trend:"图文清单、短视频提醒和门店陈列。",brand:"用真实商品信息支撑转化。",ip:"IP元素必须以授权事实为前提。",idea:"节点主题视觉 + 清晰CTA。",risk:"日期、素材版权、价格与规则需核验。"};openDrawer("<span class='pill'>AI生成节点Brief · 离线演示</span><h2>"+e.name+" · 节点Brief</h2>"+["节点背景","消费者情绪","社会热点","内容趋势","品牌机会","IP机会","潜在创意方向","风险提示"].map((k,i)=>"<div class='brief-section'><b>"+k+"</b><p>"+Object.values(brief)[i]+"</p></div>").join("")+"<p class='muted small'>演示Brief不替代实时舆情、商品事实或品牌/IP/经纪审核。</p><button class='btn ghost' data-node-action='back' data-node-id='"+e.id+"' style='width:100%;margin-top:10px'>返回节点详情</button>");document.querySelector("[data-node-action='back']").onclick=()=>openNodeDetail(id)}
+function openNodeBrief(id){const e=events.find(x=>x.id===id);if(!e)return;const cat=nodeCategory(e),brief={"艺人节点":{background:"成员节点与团体内容带来陪伴感和身份认同。",emotion:"粉丝期待7人完整、成员差异化表达和准确口径。",social:"成长、追星生活和年轻人情绪可作为内容语境。",trend:"短视频口播、语录卡、陪伴式日常和演出切片。",brand:"用日常可用产品承接情绪，不把物料变成单纯硬广。",ip:"成员肖像、语录、同款、应援元素需逐项授权。",idea:"时代少年团陪你开学 + 生活场景产品清单。",risk:"漏人、错名、动物塑误用、单人素材未授权。"},"营销项目":{background:"明确周期的品牌战役，需要把节点情绪转为传播与交易动作。",emotion:"新开始、焕新、参与感和可执行的购买路径。",social:"开学/大促等社会节奏与平台内容趋势。",trend:"话题预热、达人种草、到店打卡、直播转化。",brand:"商品、门店、赠品和线上内容形成闭环。",ip:"团体/成员使用范围、logo与联合标识先过审批。",idea:"情绪主张 + 同款清单 + 门店任务卡。",risk:"预算、库存、门店范围、审批准入和福利规则。"}}[cat]||{background:"围绕节点建立品牌与消费者的连接。",emotion:"轻量参与、明确利益和可理解的信息。",social:"结合节日或季节语境，避免生造热点。",trend:"图文清单、短视频提醒和门店陈列。",brand:"用真实商品信息支撑转化。",ip:"IP元素必须以授权事实为前提。",idea:"节点主题视觉 + 清晰CTA。",risk:"日期、素材版权、价格与规则需核验。"};openDrawer("<span class='pill'>AI生成节点Brief · 离线演示</span><h2>"+e.name+" · 节点Brief</h2>"+["节点背景","消费者情绪","社会热点","内容趋势","品牌机会","IP机会","潜在创意方向","风险提示"].map((k,i)=>"<div class='brief-section'><b>"+k+"</b><p>"+Object.values(brief)[i]+"</p></div>").join("")+"<p class='muted small'>演示Brief不替代实时舆情、商品事实或品牌/IP/经纪审核。</p><button class='btn ghost' data-node-action='back' data-node-id='"+e.id+"' style='width:100%;margin-top:10px'>返回节点详情</button>");document.querySelector("[data-node-action='back']").onclick=()=>openNodeDetail(id)}
 function makeProjectFromNode(e){const p=nodePriority(e),budget=p==="S"?300000:p==="A"?120000:50000,parts=p==="S"?[70000,80000,45000,45000,30000,30000]:p==="A"?[30000,30000,18000,18000,12000,12000]:[12000,13000,7500,7500,5000,5000];return{id:"P"+(projects.length+1),name:e.name+"营销项目",status:"待启动",budget,progress:0,owner:"待分配",days:"待计算",risk:"授权、预算、商品与门店信息待核验",node:e.name,cycle:nodeDateRange(e),priority:p,collaborators:"待分配",goals:"待填写",brief:{target:nodeAudience(e),core:"节点情绪与陪伴感",background:"由节点模板生成的内部项目草案。",strategy:"先核验权益、商品、门店与排期，再进入发布。",creative:"节点主题内容 + 商品/门店承接。"},budgets:[["物料制作",parts[0]],["媒体投放",parts[1]],["KOL合作",parts[2]],["门店活动",parts[3]],["艺人相关",parts[4]],["备用金buffer",parts[5]]],phases:[["项目立项","待定","待定","待分配","项目brief","待开始",true],["创意策划","待定","待定","待分配","创意方向","待开始",false],["审核确认","待定","待定","艺人/IP组","授权与法务审核","待审核",true]],tasks:[["待开始","项目brief","待分配","待分配","待定","高","目标、预算与节点口径"],["待审核","授权与法务审核","艺人/IP组","品牌法务","待定","高","授权凭证与发布边界"]]}}
 function openProjectTemplate(id){const e=events.find(x=>x.id===id);if(!e)return;const p=nodePriority(e),budgetSuggest=p==="S"?300000:p==="A"?120000:50000,platforms=p==="S"?"微博、抖音、小红书、门店、直播":"微博/抖音 + 门店";openDrawer("<span class='pill red'>项目模板 · 待确认</span><h2>创建："+e.name+"营销项目</h2><div class='project-template'><div class='project-template-row'><b>项目名称</b><span>"+e.name+"营销项目</span></div><div class='project-template-row'><b>项目周期</b><span>"+nodeDateRange(e)+"</span></div><div class='project-template-row'><b>默认排期</b><span>T-21 Brief → T-14创意 → T-7审核 → T-3预热 → T日上线</span></div><div class='project-template-row'><b>目标人群</b><span>"+nodeAudience(e)+"</span></div><div class='project-template-row'><b>建议预算</b><span>¥"+budgetSuggest.toLocaleString()+"（按"+p+"级模板）</span></div><div class='project-template-row'><b>推荐平台</b><span>"+platforms+"</span></div><div class='project-template-row'><b>关键任务</b><span>节点Brief、创意产出、7人/授权核对、商品与门店确认、发布排期</span></div><div class='project-template-row'><b>负责人</b><span>待分配</span></div></div><button class='btn primary' id='confirmProjectBtn' style='width:100%'>确认创建项目</button><p class='muted small'>创建后只生成内部草案，不代表获得艺人/IP授权或锁定预算。</p>");document.getElementById("confirmProjectBtn").onclick=()=>{const project=makeProjectFromNode(e);projects.push(project);activities.push({id:"A"+(activities.length+1),name:project.name,progress:0,owner:"待分配",milestone:"完成节点Brief与首轮排期",risk:project.risk});selectedProjectId=project.id;renderProjectCenter();renderActivities();closeDrawer();document.getElementById("projects").scrollIntoView({behavior:"smooth"});toast("已创建项目模板，已加入项目中心")}}
 function openNodeForm(id){const e=id?events.find(x=>x.id===id):null,cats=["艺人节点","品牌节点","节日节点","社会节点","新品节点","营销项目"];openDrawer("<span class='pill'>"+(e?"编辑节点":"添加自定义节点")+"</span><h2>"+(e?e.name:"新节点")+"</h2><div class='field'><label>节点名称</label><input id='nodeNameInput' value='"+(e?e.name:"")+"' placeholder='例如：秋季新品发布'></div><div class='field'><label>节点类型</label><select id='nodeCategoryInput'>"+cats.map(c=>"<option "+(e&&nodeCategory(e)===c?"selected":"")+">"+c+"</option>").join("")+"</select></div><div class='field'><label>开始日期</label><input id='nodeDateInput' type='date' value='"+(e&&e.date?e.date:"")+"'></div><div class='field'><label>结束日期（可选）</label><input id='nodeEndDateInput' type='date' value='"+(e&&e.endDate?e.endDate:"")+"'></div><div class='field'><label>目标人群</label><input id='nodeAudienceInput' value='"+(e?nodeAudience(e):"")+"' placeholder='例如：18-25岁年轻消费者'></div><div class='field'><label>优先级</label><select id='nodePriorityInput'><option "+(e&&nodePriority(e)==="S"?"selected":"")+">S</option><option "+(e&&nodePriority(e)==="A"?"selected":"")+">A</option><option "+(e&&nodePriority(e)==="B"?"selected":"")+">B</option></select></div><div class='field'><label>重复规则</label><select id='nodeRepeatInput'><option>无</option><option "+(e&&e.repeat==="每年"?"selected":"")+">每年</option><option "+(e&&e.repeat==="每月"?"selected":"")+">每月</option></select></div><button class='btn primary' id='saveNodeBtn' style='width:100%'>保存节点</button>");document.getElementById("saveNodeBtn").onclick=()=>{const name=document.getElementById("nodeNameInput").value.trim(),date=document.getElementById("nodeDateInput").value;if(!name||(!date&&!e)){toast("节点名称和开始日期为必填");return}const target=e||{id:"NODE-"+String(events.length+1).padStart(3,"0"),status:"pending",note:"手动添加节点，待项目负责人确认"};target.name=name;target.category=document.getElementById("nodeCategoryInput").value;target.type=target.category;target.date=date||null;target.endDate=document.getElementById("nodeEndDateInput").value||null;target.audience=document.getElementById("nodeAudienceInput").value.trim()||"18-30岁年轻消费者";target.priority=document.getElementById("nodePriorityInput").value;target.repeat=document.getElementById("nodeRepeatInput").value;if(!e)events.push(target);renderCalendar();closeDrawer();toast(e?"节点已更新":"自定义节点已添加")}}
@@ -460,6 +456,24 @@ document.querySelectorAll(".budget-input").forEach(i=>i.oninput=()=>{budget[i.da
 function updateWindow(){windowStart=document.getElementById("windowStartInput").value;windowEnd=document.getElementById("windowEndInput").value;const d=windowEnd?Math.ceil((new Date(windowEnd)-new Date())/86400000):null;const focus=document.querySelector(".hero-focus strong");if(focus)focus.textContent="开学季进入收官冲刺，距离项目截止还有 "+(d===null?"待定":Math.max(0,d))+" 天。";toast("已更新活动窗口")}
 document.getElementById("windowStartInput").onchange=updateWindow;document.getElementById("windowEndInput").onchange=updateWindow;document.getElementById("budgetCapInput").oninput=()=>{budgetCap=Math.max(0,Number(document.getElementById("budgetCapInput").value)||0);renderBudget()};
 document.getElementById("drawerClose").onclick=closeDrawer;document.getElementById("drawer").onclick=e=>{if(e.target.id==="drawer")closeDrawer()};document.getElementById("methodBtn").onclick=()=>document.getElementById("methodDrawer").classList.add("open");document.getElementById("methodClose").onclick=()=>document.getElementById("methodDrawer").classList.remove("open");document.getElementById("methodDrawer").onclick=e=>{if(e.target.id==="methodDrawer")e.target.classList.remove("open")};
+(function(){
+  const openingTheme="时代少年团陪你开学";
+  const e03=evidence.find(x=>x.id==="E-S03");
+  if(e03)e03.text="希望“"+openingTheme+"”主题像成员陪我一起开启新学期。";
+  const timeline7=timelineData["7"]&&timelineData["7"][0];
+  if(timeline7)timeline7.sub="主KV、主题文案、同款命名";
+  const p=projects.find(x=>x.id==="P1");
+  if(p){
+    p.brief.background="围绕宿舍焕新和陪伴感，把“"+openingTheme+"”主题与名创优品日常商品连接起来。";
+    p.brief.creative=openingTheme+" × 宿舍焕新清单 × 门店打卡。";
+    p.phases.forEach(x=>{if(x[4]==="7人主KV方向与语录框架")x[4]=openingTheme+"主KV方向与主题文案框架";if(x[4]==="主KV、语录、门店打卡集中发布")x[4]="主KV、主题文案、门店打卡集中发布"});
+    p.tasks.forEach(x=>{if(x[6]==="7人主KV与语录框架")x[6]=openingTheme+"主KV与主题文案框架"});
+  }
+  const keywordSpan=document.querySelector("#weiboMonitor .weibo-keywords span");
+  if(keywordSpan&&!keywordSpan.textContent.includes("TF家族"))keywordSpan.textContent+="、TF家族";
+  const openBrief=openNodeBrief;
+  openNodeBrief=function(id){openBrief(id);const body=document.getElementById("drawerContent");if(body)body.innerHTML=body.innerHTML.replace(/7人7句陪伴语录/g,openingTheme).replace(/成员语录可以印在/g,openingTheme+"主题可以印在")};
+})();
 renderTimeline();renderHotspots();renderBrief();renderActivities();renderProjectCenter();renderRadar();renderCalendar();renderInfoCenter();renderRisks();renderRiskCheckView();renderRights();renderBudget();setupNavScrollSync();
 function renderRiskMetaTop(){const anchor=document.getElementById("riskTabs");if(!anchor||document.getElementById("riskMeta"))return;anchor.insertAdjacentHTML("beforebegin","<div class='risk-intro' id='riskMeta'><b>风险分级说明：</b>阻断=未核验不得发布；高风险=必须在brief留护栏；社区约定≠官方禁令。<h4 style='margin:10px 0 5px'>待核验清单</h4><ul class='muted' style='margin:0;padding-left:18px;font-size:12px'><li>演唱会/综艺日期与周年口径</li><li>商品价格、库存、门店范围与兑换条件</li><li>7人单人肖像、同款与署名授权</li><li>logo、IP产品及第三方素材审核</li><li>达人投放报价、商业标识与发布时间</li></ul></div>")}
 function applyCalendarPrivacy(){const root=document.getElementById("calendarGrid");if(!root)return;document.querySelectorAll("#calendarGrid .month").forEach((box,i)=>{if(i>=9){box.classList.add("calendar-hidden-month");box.querySelectorAll(".event").forEach(e=>e.classList.add("calendar-hidden-event"))}});if(calendarView==="month"&&calendarMonth>=9){root.classList.add("calendar-hidden-view")}else root.classList.remove("calendar-hidden-view")}
@@ -516,7 +530,7 @@ const baseOpenProjectEditor=openProjectEditor;openProjectEditor=function(id){bas
  (function(){const encryptedProjectIds=new Set();const esc=v=>String(v==null?'':v).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');function renderDepartmentEditor(){openDrawer("<span class='pill'>部门协作 · 编辑</span><h2>添加部门</h2><div class='project-edit-form'><div class='field'><label>部门名称</label><input id='departmentNameInput' placeholder='例如：商品组'></div><div class='field'><label>职责说明</label><textarea id='departmentDescInput' placeholder='例如：选品、商品信息核验与库存协调'></textarea></div><button class='btn primary' id='departmentSaveBtn' style='width:100%'>添加部门</button></div>");const save=document.getElementById('departmentSaveBtn');if(save)save.onclick=()=>{const name=document.getElementById('departmentNameInput').value.trim(),desc=document.getElementById('departmentDescInput').value.trim();if(!name){toast('请填写部门名称');return}if(departments.some(d=>d.name===name)){toast('该部门已存在');return}departments.push({id:'dept-'+Date.now(),name,desc:desc||'职责待补充'});renderDepartments();closeDrawer();toast(name+'已添加，可拖拽分配到项目')}}function renderDepartmentCards(){const root=document.getElementById('departmentGrid');if(!root)return;root.innerHTML=departments.map(d=>"<article class='department-card' draggable='true' data-dept-id='"+esc(d.id)+"'><b>"+esc(d.name)+"</b><small>"+esc(d.desc)+"</small></article>").join('');root.querySelectorAll('[data-dept-id]').forEach(card=>{card.ondragstart=e=>{e.dataTransfer.setData('text/department',card.dataset.deptId);card.style.opacity='.55'};card.ondragend=()=>card.style.opacity='1'})}renderDepartments=renderDepartmentCards;const addDepartmentBtn=document.getElementById('addDepartmentBtn');if(addDepartmentBtn)addDepartmentBtn.onclick=renderDepartmentEditor;function applyProjectEncryption(){const list=document.getElementById('projectList'),detail=document.getElementById('projectDetail');if(list)list.querySelectorAll('[data-project-id]').forEach(card=>{const locked=encryptedProjectIds.has(card.dataset.projectId);card.classList.toggle('project-encrypted',locked);let mask=card.querySelector('.project-encryption-mask');if(locked&&!mask){mask=document.createElement('div');mask.className='project-encryption-mask';mask.innerHTML='🔒 项目内容已加密<small>仅授权成员可查看</small>';card.appendChild(mask)}if(!locked&&mask)mask.remove()});if(detail){const locked=encryptedProjectIds.has(selectedProjectId);detail.classList.toggle('project-encrypted',locked);let mask=detail.querySelector('.project-encryption-mask');if(locked&&!mask){mask=document.createElement('div');mask.className='project-encryption-mask';mask.innerHTML='🔒 项目内容已加密<small>仅授权成员可查看</small>';detail.appendChild(mask)}if(!locked&&mask)mask.remove()}}const priorCenter=renderProjectCenter;renderProjectCenter=function(){priorCenter();applyProjectEncryption()};const priorDetail=renderProjectDetail;renderProjectDetail=function(id){priorDetail(id);applyProjectEncryption()};renderDepartmentCards();applyProjectEncryption()})();
 (function(){const esc=v=>String(v==null?'':v).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');const findDepartment=id=>departments.find(d=>d.id===id);function openDepartmentForm(id){const d=id?findDepartment(id):null;openDrawer("<span class='pill'>部门协作 · 编辑</span><h2>"+(d?'编辑部门':'添加部门')+"</h2><div class='project-edit-form'><div class='field'><label>部门名称</label><input id='departmentFormName' value='"+esc(d?d.name:'')+"' placeholder='例如：商品组'></div><div class='field'><label>职责说明</label><textarea id='departmentFormDesc' placeholder='例如：选品、商品信息核验与库存协调'>"+esc(d?d.desc:'')+"</textarea></div><button class='btn primary' id='departmentFormSave' style='width:100%'>保存</button></div>");const save=document.getElementById('departmentFormSave');if(save)save.onclick=()=>{const name=document.getElementById('departmentFormName').value.trim(),desc=document.getElementById('departmentFormDesc').value.trim();if(!name){toast('请填写部门名称');return}if(departments.some(x=>x.name===name&&(!d||x.id!==d.id))){toast('该部门已存在');return}if(d){d.name=name;d.desc=desc||'职责待补充'}else departments.push({id:'dept-'+Date.now(),name,desc:desc||'职责待补充'});renderDepartments();closeDrawer();toast(d?'部门信息已更新':'部门已添加')}}function removeDepartment(id){const d=findDepartment(id);if(!d)return;if(!confirm('确定删除“'+d.name+'”？删除后将从项目协作人员与任务协作中移除。'))return;departments.splice(departments.indexOf(d),1);Object.keys(departmentAssignments).forEach(pid=>{departmentAssignments[pid]=(departmentAssignments[pid]||[]).filter(x=>x!==id)});projects.forEach(p=>{p.collaborators=String(p.collaborators||'').split('、').filter(x=>x&&x!==d.name).join('、');p.tasks.forEach(t=>{t[3]=String(t[3]||'').split('、').filter(x=>x&&x!==d.name).join('、')})});renderDepartments();renderProjectCenter();toast('部门已删除')}function renderDepartmentCardsEnhanced(){const root=document.getElementById('departmentGrid');if(!root)return;root.innerHTML=departments.map(d=>"<article class='department-card' draggable='true' data-dept-id='"+esc(d.id)+"'><b>"+esc(d.name)+"</b><small>"+esc(d.desc)+"</small><div class='department-card-actions'><button type='button' class='department-edit' data-dept-edit='"+esc(d.id)+"' title='编辑部门' aria-label='编辑部门'>✎</button><button type='button' class='department-delete' data-dept-delete='"+esc(d.id)+"' title='删除部门' aria-label='删除部门'>🗑</button></div></article>").join('');root.querySelectorAll('[data-dept-id]').forEach(card=>{card.ondragstart=e=>{e.dataTransfer.setData('text/department',card.dataset.deptId);e.dataTransfer.effectAllowed='move';card.style.opacity='.55'};card.ondragend=()=>card.style.opacity='1';card.onclick=e=>{if(!e.target.closest('button'))openDepartmentForm(card.dataset.deptId)}});root.querySelectorAll('[data-dept-edit]').forEach(b=>b.onclick=e=>{e.stopPropagation();openDepartmentForm(b.dataset.deptEdit)});root.querySelectorAll('[data-dept-delete]').forEach(b=>b.onclick=e=>{e.stopPropagation();removeDepartment(b.dataset.deptDelete)})}renderDepartments=renderDepartmentCardsEnhanced;const add=document.getElementById('addDepartmentBtn');if(add)add.onclick=()=>openDepartmentForm();const trash=document.getElementById('departmentTrash');if(trash){trash.ondragover=e=>{e.preventDefault();trash.classList.add('drag-over');e.dataTransfer.dropEffect='move'};trash.ondragleave=()=>trash.classList.remove('drag-over');trash.ondrop=e=>{e.preventDefault();trash.classList.remove('drag-over');removeDepartment(e.dataTransfer.getData('text/department'))}}renderDepartments()})();
 (function(){
- const api=window.WEIBO_HOT_API||'',termsDefault='时代少年团,马嘉祺,丁程鑫,宋亚轩,刘耀文,张真源,严浩翔,贺峻霖,TNT,时代峰峻,MINISO,名创优品,潮玩',state={timer:null,rows:[],allRows:[],customRows:[],customQuery:'',last:null,noMatch:false,matchedCount:0,seenRefs:new Set()};
+ const api=window.WEIBO_HOT_API||'',termsDefault='时代少年团,马嘉祺,丁程鑫,宋亚轩,刘耀文,张真源,严浩翔,贺峻霖,TNT,时代峰峻,TF家族,MINISO,名创优品,潮玩',state={timer:null,rows:[],allRows:[],customRows:[],customQuery:'',last:null,noMatch:false,matchedCount:0,seenRefs:new Set()};
  const escapeHtml=v=>String(v==null?'':v).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');
  const norm=v=>String(v==null?'':v).toLowerCase().replace(/\s+/g,'');
  const keywordsFromInput=()=>termsDefault.split(',').map(x=>x.trim()).filter(Boolean);
@@ -525,7 +539,7 @@ const baseOpenProjectEditor=openProjectEditor;openProjectEditor=function(id){bas
  const activeStage=()=>{const p=projects.find(x=>x.status==='进行中')||projects[0]||{};return p.progress>=70?'收官冲刺':p.progress>=40?'爆发期':p.progress>0?'预热中':'待启动'};
  const parseHot=v=>{const s=String(v==null?'':v).replace(/,/g,'').trim(),m=s.match(/[\d.]+/);if(!m)return 0;let n=Number(m[0]);if(s.includes('亿'))n*=100000000;else if(s.includes('万'))n*=10000;return Math.max(0,Math.round(n))};
  const aiTemplate=(category,title)=>category==='TNT热点'?'TNT成员/团体热搜处于'+activeStage()+'，可借成员个人热度做内容向借势；未官宣行程不直接绑定。':category==='MINISO热点'?'MINISO/潮玩相关热搜可在'+activeStage()+'阶段落到玩偶、生活用品或门店/电商组合，引导可核验的商品转化。':'待人工确认，暂不进入创意池。';
- const personKeywords=['马嘉祺','丁程鑫','宋亚轩','刘耀文','张真源','严浩翔','贺峻霖','时代峰峻'],groupKeywords=['时代少年团','TNT'],brandKeywords=['名创优品','MINISO','潮玩'],positiveWords=/舞台|首发|官宣|获奖|新歌|新专辑|演唱会|晚会|合作|联名|生日|周年|亮相|优秀|暖心|治愈|破圈|好评/i,negativeWords=/争议|翻车|塌房|道歉|解约|起诉|负面|吐槽|抵制|假|骗|事故|去世|生病|受伤|黑料|脱粉/i,oldWords=/旧闻|回顾|历史|往期|重温|几年前|去年|曾经/i;
+ const personKeywords=['马嘉祺','丁程鑫','宋亚轩','刘耀文','张真源','严浩翔','贺峻霖','时代峰峻'],groupKeywords=['时代少年团','TNT','TF家族'],brandKeywords=['名创优品','MINISO','潮玩'],positiveWords=/舞台|首发|官宣|获奖|新歌|新专辑|演唱会|晚会|合作|联名|生日|周年|亮相|优秀|暖心|治愈|破圈|好评/i,negativeWords=/争议|翻车|塌房|道歉|解约|起诉|负面|吐槽|抵制|假|骗|事故|去世|生病|受伤|黑料|脱粉/i,oldWords=/旧闻|回顾|历史|往期|重温|几年前|去年|曾经/i;
  const matchAny=(title,words)=>words.find(k=>norm(title).includes(norm(k)))||'';
  const classifyTopic=title=>{const person=matchAny(title,personKeywords);if(person)return{kind:'person',member:person,category:'TNT热点'};if(matchAny(title,groupKeywords))return{kind:'group',category:'TNT热点'};if(matchAny(title,brandKeywords))return{kind:'brand',category:'MINISO热点'};return{kind:'unknown',category:''}};
  const assessTopic=(title,isRealtime,kind)=>{if(kind==='person')return{status:'memory',canGenerate:false,reason:'单人/公司热搜，不建议直接联动'};if(negativeWords.test(title))return{status:'negative',canGenerate:false,reason:'负面话题，建议记录到代言人记忆中持续关注，不建议联动。'};return{status:'positive',canGenerate:true,reason:''}};
@@ -697,23 +711,23 @@ function refreshLiveDate(){const now=new Date(),date=[now.getFullYear(),String(n
   const parseDate=v=>{const s=String(v||'').trim();let m=/^(\d{4})-(\d{2})-(\d{2})$/.exec(s);if(m)return new Date(+m[1],+m[2]-1,+m[3]);m=/^(\d{2})\.(\d{2})$/.exec(s);return m?new Date(2026,+m[1]-1,+m[2]):null};
   const dayStart=d=>new Date(d.getFullYear(),d.getMonth(),d.getDate());
   const defaultBirthdayProject=()=>({
-    id:'P4',name:'刘耀文生日礼物创意项目',status:'待启动',budget:1000,progress:0,owner:'代言人项目组',days:'待计算',risk:'艺人审核确认待完成',node:'刘耀文生日',cycle:'2026-09-13 — 2026-09-23',priority:'A',collaborators:'代言人项目组、设计组、运营组、艺人/IP组',goals:'生日礼物创意按期完成并通过审核',
+    id:'P4',name:'刘耀文生日礼物创意项目',status:'待启动',budget:1000,progress:0,owner:'营销组',days:'待计算',risk:'艺人审核确认待完成',node:'刘耀文生日',cycle:'2026-09-13 — 2026-09-23',priority:'A',collaborators:'营销组、设计组、运营组、法务组',goals:'生日礼物创意按期完成并通过审核',
     brief:{target:'时代少年团粉丝与年轻消费者',core:'生日陪伴与心意表达',background:'围绕刘耀文生日准备礼物创意与发布物料。',strategy:'先完成礼物与视觉定稿，再进入艺人审核与发布准备。',creative:'生日蛋糕/鲜花礼物 + 海报文案 + 发布准备。'},
     budgets:[['物料制作',1000],['媒体投放',0],['KOL合作',0],['门店活动',0],['艺人相关',0],['备用金buffer',0]],
     phases:[
-      ['创意策划','09.13','09.15','代言人项目组','生日蛋糕、生日鲜花策划','待启动',false],
-      ['物料制作','09.16','09.20','代言人项目组','生日蛋糕与鲜花方案内部定稿','待启动',false],
+      ['创意策划','09.13','09.15','营销组','生日蛋糕、生日鲜花策划','待启动',false],
+      ['物料制作','09.16','09.20','营销组','生日蛋糕与鲜花方案内部定稿','待启动',false],
       ['审核确认','09.13','09.18','设计组','生日海报、文案策划','待启动',false],
       ['预热期','09.18','09.20','设计组','生日海报文案内部定稿','待启动',false],
-      ['爆发期','09.20','09.21','艺人/IP组','刘耀文生日艺人审核确认','待启动',false],
+      ['爆发期','09.20','09.21','法务组','刘耀文生日艺人审核确认','待启动',false],
       ['长尾期','09.22','09.23','运营组','刘耀文生日准备发布','待启动',false]
     ],
     tasks:[
-      ['待启动','刘耀文生日蛋糕定稿','代言人项目组','设计组','09.20','中','生日蛋糕方案'],
-      ['待启动','刘耀文鲜花定稿','代言人项目组','设计组','09.20','中','生日鲜花方案'],
-      ['待启动','刘耀文生日海报文案定稿','设计组','代言人项目组','09.20','高','生日海报与文案'],
-      ['待启动','刘耀文生日艺人审核确认','艺人/IP组','代言人项目组','09.21','高','审核确认'],
-      ['待启动','刘耀文生日准备发布','运营组','渠道发展组','09.23','高','发布排期与物料']
+      ['待启动','刘耀文生日蛋糕定稿','营销组','设计组','09.20','中','生日蛋糕方案'],
+      ['待启动','刘耀文鲜花定稿','营销组','设计组','09.20','中','生日鲜花方案'],
+      ['待启动','刘耀文生日海报文案定稿','设计组','营销组','09.20','高','生日海报与文案'],
+      ['待启动','刘耀文生日艺人审核确认','法务组','营销组','09.21','高','审核确认'],
+      ['待启动','刘耀文生日准备发布','运营组','业务组','09.23','高','发布排期与物料']
     ]
   });
   const ensureBirthdayProject=()=>{
@@ -800,6 +814,64 @@ function refreshLiveDate(){const now=new Date(),date=[now.getFullYear(),String(n
   const style=document.createElement('style');
   style.textContent='.parameter-row{display:none!important}';
   document.head.appendChild(style);
+})();
+</script>
+<script>
+/* Keep department names consistent across the department board and every project/task record. */
+(function(){
+  const canonical=[
+    {id:'marketing',name:'营销组',desc:'项目统筹、艺人沟通与营销策略'},
+    {id:'design',name:'设计组',desc:'主视觉、物料与门店陈列设计'},
+    {id:'operations',name:'运营组',desc:'社媒运营、活动机制与用户触达'},
+    {id:'retail',name:'门店组',desc:'门店执行、库存与核销管理'},
+    {id:'legal',name:'法务组',desc:'合同、授权与素材合规审核'},
+    {id:'business',name:'业务组',desc:'商品、电商、直播与渠道资源承接'}
+  ];
+  const mapDepartment=value=>{
+    const text=String(value==null?'':value).trim();
+    if(!text)return '';
+    if(canonical.some(d=>d.name===text))return text;
+    if(/代言人项目组|艺人\/IP组/.test(text))return '营销组';
+    if(/品牌法务|法务审核|法务/.test(text))return '法务组';
+    if(/设计组/.test(text))return '设计组';
+    if(text==='运营组')return '运营组';
+    if(/营运组|零售营销|门店组/.test(text))return '门店组';
+    if(/MCN组|渠道发展组|媒介组|内容组|商品组|品牌营销部|项目组|策略组/.test(text))return '业务组';
+    return text;
+  };
+  const mapList=value=>Array.from(new Set(String(value==null?'':value).split('、').map(mapDepartment).filter(Boolean))).join('、');
+  if(typeof projects!=='undefined')projects.forEach(p=>{
+    p.owner=mapDepartment(p.owner);
+    p.collaborators=mapList(p.collaborators);
+    (p.phases||[]).forEach(phase=>{phase[3]=mapDepartment(phase[3])});
+    (p.tasks||[]).forEach(task=>{task[2]=mapDepartment(task[2]);task[3]=mapList(task[3])});
+  });
+  if(typeof departments!=='undefined')departments.splice(0,departments.length,...canonical);
+  if(typeof departmentAssignments!=='undefined')Object.keys(departmentAssignments).forEach(key=>{departmentAssignments[key]=[]});
+  if(typeof renderDepartments==='function')renderDepartments();
+  if(typeof window.__persistProjectData==='function')window.__persistProjectData();
+  if(typeof renderProjectCenter==='function')renderProjectCenter();
+})();
+</script>
+<script>
+/* Refresh the dashboard task timeline whenever project-center data or the selected project changes. */
+(function(){
+  const refreshDashboardTasks=()=>{
+    const timeline=document.getElementById('taskTimeline');
+    if(!timeline||typeof renderTimeline!=='function')return;
+    const active=document.querySelector('#horizonTabs .active');
+    renderTimeline(active&&active.dataset.horizon||'today');
+  };
+  document.querySelectorAll('.nav button[data-target="dashboard"]').forEach(button=>button.addEventListener('click',()=>setTimeout(refreshDashboardTasks,250)));
+  if(typeof renderProjectCenter==='function'){
+    const originalRenderProjectCenter=renderProjectCenter;
+    renderProjectCenter=function(){
+      const result=originalRenderProjectCenter.apply(this,arguments);
+      setTimeout(refreshDashboardTasks,0);
+      return result;
+    };
+  }
+  refreshDashboardTasks();
 })();
 </script>
 </body>
